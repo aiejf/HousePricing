@@ -5,16 +5,16 @@ from flask import Flask,request,app,jsonify,url_for,render_template
 import numpy as np
 import pandas as pd
 
-app=Flask(__name__)
+application=Flask(__name__)
 
 ## Load the model
 model=pickle.load(open('rf.pkl','rb'))
    
-@app.route('/')
+@application.route('/')
 def home():
     return render_template("home.html")
 
-@app.route('/predict', methods=['POST'])
+@application.route('/predict', methods=['POST'])
 def predict():
     
     input_var=[i for i in request.form.values()]
@@ -35,5 +35,5 @@ def predict():
 #     return jsonify(out)
 
 if __name__=="__main__":
-    app.run(debug=True)
+    application.run(debug=True)
 
