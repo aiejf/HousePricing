@@ -1,2 +1,2 @@
 # HousePricing
-Deploy a ML model using AWS code pipeline and Elastic Beanstalk
+Deploy a ML model using AWS code pipeline CICI and Elastic Beanstalk
