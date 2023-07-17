@@ -26,14 +26,6 @@ def predict():
 
     return render_template('home.html', prediction_text='Sales prices should be $ {}'.format(output))     
 
-# @app.route('/results', methods=['POST'])
-# def results():
-#     data=request.get_json(force=True)
-
-#     predict=model.predict([np.array(list(data.values()))])
-#     out=predict[0]
-#     return jsonify(out)
-
 if __name__=="__main__":
     application.run(debug=True)
 
